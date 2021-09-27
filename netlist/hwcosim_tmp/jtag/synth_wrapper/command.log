@@ -1,0 +1,2 @@
+ngcbuild -sd D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/hwcosim_tmp/jtag/synth_model -sd D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist -sd D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/ipcore_dir subsystem2_cw subsystem2_cw.ngc
+xst -ifn xst_hwcosim_top.scr

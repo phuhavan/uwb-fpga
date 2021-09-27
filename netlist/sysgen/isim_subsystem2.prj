@@ -1,0 +1,3 @@
+verilog work subsystem2.v
+verilog work subsystem2_cw.v
+verilog work $XILINX/verilog/src/glbl.v

@@ -1,0 +1,419 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "xst_hwcosim_top.prj"
+
+---- Target Parameters
+Output Format                      : ngc
+Output File Name                   : "hwcosim_top"
+Target Device                      : xc7k325t
+
+---- Source Options
+Top Module Name                    : hwcosim_top
+
+---- Target Options
+Add IO Buffers                     : YES
+
+---- General Options
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Cross Clock Analysis               : YES
+Global Optimization                : AllClockNets
+Hierarchy Separator                : /
+Optimization Effort                : 2
+Optimization Goal                  : SPEED
+Write Timing Constraints           : YES
+
+---- Other Options
+report_timing_constraint_problems  : warning
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_interface.v" into library work
+Parsing module <hwcosim_shared_memory_lock_manager>.
+Parsing module <hwcosim_shared_register>.
+Parsing module <hwcosim_memory_map>.
+Parsing module <hwcosim_interface>.
+Parsing module <subsystem2_cw>.
+Analyzing Verilog file "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" into library work
+Parsing module <hwcosim_top>.
+Parsing module <jtagcosim_iface_virtex7>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <hwcosim_top>.
+
+Elaborating module <IBUFGDS>.
+
+Elaborating module <MMCM_BASE(CLKIN1_PERIOD=5.0,CLKFBOUT_MULT_F=5.0,DIVCLK_DIVIDE=1,CLKOUT0_DIVIDE_F=20.0,BANDWIDTH="OPTIMIZED")>.
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 104: Assignment to hwcosim_clkgen_mmcm_clkout1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 106: Assignment to hwcosim_clkgen_mmcm_clkout2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 108: Assignment to hwcosim_clkgen_mmcm_clkout3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 110: Assignment to hwcosim_clkgen_mmcm_clkout4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 111: Assignment to hwcosim_clkgen_mmcm_clkout5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 112: Assignment to hwcosim_clkgen_mmcm_clkout6 ignored, since the identifier is never used
+
+Elaborating module <BUFGCE>.
+
+Elaborating module <BUFGMUX>.
+
+Elaborating module <hwcosim_interface>.
+
+Elaborating module <hwcosim_memory_map>.
+
+Elaborating module <subsystem2_cw>.
+WARNING:HDLCompiler:1499 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_interface.v" Line 336: Empty module <subsystem2_cw> remains a black box.
+
+Elaborating module <jtagcosim_iface_virtex7>.
+WARNING:HDLCompiler:1499 - "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v" Line 173: Empty module <jtagcosim_iface_virtex7> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <hwcosim_top>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_top.v".
+WARNING:Xst - Value "1" of property "syn_noprune" is not applicable. List of valid values is "true, false, yes, no" 
+    Set property "box_type = user_black_box" for instance <cosim_core_inst>.
+    Summary:
+	no macro.
+Unit <hwcosim_top> synthesized.
+
+Synthesizing Unit <hwcosim_interface>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_interface.v".
+    Set property "box_type = user_black_box" for instance <hwcosim_dut_inst>.
+WARNING:Xst:647 - Input <hwcosim_sys_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <hwcosim_interface> synthesized.
+
+Synthesizing Unit <hwcosim_memory_map>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\synth_wrapper\hwcosim_interface.v".
+WARNING:Xst:647 - Input <hwcosim_mm_re> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <int_o_in_data>.
+    Found 1-bit register for signal <int_o_in_rst>.
+    Found 1-bit register for signal <int_o_in_start>.
+    Found 32-bit register for signal <int_o_sfd_threshold>.
+    Found 16-bit register for signal <int_o_sm_threshold>.
+    Found 32-bit register for signal <hwcosim_mm_data_out_bank0>.
+    Found 3-bit register for signal <int_o_ddph_i>.
+    Found 32-bit 4-to-1 multiplexer for signal <_n0092> created at line 203.
+    Summary:
+	inferred  93 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <hwcosim_memory_map> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <subsystem2_cw.ngc>.
+Loading core <subsystem2_cw> for timing and area information for instance <hwcosim_dut_inst>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 93
+ Flip-Flops                                            : 93
+# Multiplexers                                         : 2
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <hwcosim_mm_data_out_bank0_31> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_30> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_29> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_28> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_27> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_26> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_25> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_24> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_23> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_22> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_21> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_20> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_19> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_18> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_17> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_16> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_15> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_14> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_13> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_12> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_11> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_10> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_9> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_8> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_7> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_6> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_5> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_4> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_3> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_2> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hwcosim_mm_data_out_bank0_1> (without init value) has a constant value of 0 in block <hwcosim_memory_map>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance hwcosim_clkgen_mmcm in unit hwcosim_top of type MMCM_BASE has been replaced by MMCME2_ADV
+INFO:Xst:1901 - Instance bufgce_hwcosim_clkgen_mmcm_clkout0 in unit hwcosim_top of type BUFGCE has been replaced by BUFGCTRL
+INFO:Xst:1901 - Instance bufgmux_comp1 in unit hwcosim_top of type BUFGMUX has been replaced by BUFGCTRL
+INFO:Xst:1901 - Instance bufgmux_comp2 in unit hwcosim_top of type BUFGMUX has been replaced by BUFGCTRL
+
+Optimizing unit <hwcosim_top> ...
+
+Optimizing unit <hwcosim_memory_map> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block hwcosim_top, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 62
+ Flip-Flops                                            : 62
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : hwcosim_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 12945
+#      GND                         : 2
+#      INV                         : 13
+#      LUT1                        : 62
+#      LUT2                        : 640
+#      LUT3                        : 1070
+#      LUT4                        : 450
+#      LUT5                        : 416
+#      LUT6                        : 6954
+#      MUXCY                       : 868
+#      MUXF7                       : 1150
+#      MUXF8                       : 510
+#      VCC                         : 2
+#      XORCY                       : 808
+# FlipFlops/Latches                : 5621
+#      FD                          : 7
+#      FDC                         : 5
+#      FDCE                        : 368
+#      FDE                         : 78
+#      FDR                         : 45
+#      FDRE                        : 4990
+#      FDSE                        : 128
+# Clock Buffers                    : 4
+#      BUFG                        : 1
+#      BUFGCTRL                    : 3
+# IO Buffers                       : 1
+#      IBUFGDS                     : 1
+# DSPs                             : 1
+#      DSP48E1                     : 1
+# Others                           : 3
+#      jtagcosim_iface_virtex7     : 1
+#      MMCME2_ADV                  : 1
+#      TIMESPEC                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k325tfbg676-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            5621  out of  407600     1%  
+ Number of Slice LUTs:                 9605  out of  203800     4%  
+    Number used as Logic:              9605  out of  203800     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   9989
+   Number with an unused Flip Flop:    4368  out of   9989    43%  
+   Number with an unused LUT:           384  out of   9989     3%  
+   Number of fully used LUT-FF pairs:  5237  out of   9989    52%  
+   Number of unique control sets:        42
+
+IO Utilization: 
+ Number of IOs:                           2
+ Number of bonded IOBs:                   2  out of    400     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     32    12%  
+ Number of DSP48E1s:                      1  out of    840     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+hwcosim_clkgen_mmcm_clkout0_buf    | BUFGCTRL               | 62    |
+hwcosim_sstep_clk_int              | BUFGCTRL               | 5559  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.304ns (Maximum Frequency: 188.552MHz)
+   Minimum input arrival time before clock: 2.103ns
+   Maximum output required time after clock: 0.568ns
+   Maximum combinational path delay: 1.222ns
+
+=========================================================================
+Timing constraint: TS_clk_2e6d98b4 = PERIOD TIMEGRP "clk_2e6d98b4" 20 nS HIGH 10 nS
+  Clock period: 5.304ns (frequency: 188.552MHz)
+  Total number of paths / destination ports: 22389612 / 11550
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  14.696ns
+  Source:               hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (FF)
+  Destination:          hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0 (FF)
+  Data Path Delay:      5.304ns (Levels of Logic = 11)
+  Source Clock:         hwcosim_sstep_clk_int rising at 0.000ns
+  Destination Clock:    hwcosim_sstep_clk_int rising at 20.000ns
+
+  Data Path: hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (FF) to hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.232   0.466  subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym<5>)
+     LUT4:I0->O            1   0.043   0.289  subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2_SW0 (N294)
+     LUT6:I5->O            6   0.043   0.451  subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2 (subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2)
+     LUT6:I3->O          377   0.043   0.710  subsystem2_x0/black_box/SYNC_DATAPATH/enSYNC71 (subsystem2_x0/black_box/SYNC_DATAPATH/enSYNC7)
+     LUT6:I0->O            2   0.043   0.461  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_reg_cm<126>1 (subsystem2_x0/black_box/SYNC_DATAPATH/reg_cm<126>)
+     LUT6:I2->O            1   0.043   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_GND_261_o_X_260_o_Mux_433_o_159 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_GND_261_o_X_260_o_Mux_433_o_159)
+     MUXF7:I1->O           1   0.172   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_14_f7_2 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_14_f73)
+     MUXF8:I1->O           1   0.122   0.428  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_13_f8 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_13_f8)
+     LUT6:I3->O            1   0.043   0.456  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_7 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_7)
+     LUT6:I2->O          129   0.043   0.465  subsystem2_x0/black_box/SYNC_DATAPATH/countsample<7>16 (subsystem2_x0/black_box/SYNC_DATAPATH/cm)
+     LUT2:I0->O          128   0.043   0.664  subsystem2_x0/black_box/SYNC_DATAPATH/en_sm5_rstpot (subsystem2_x0/black_box/SYNC_DATAPATH/en_sm5_rstpot)
+     LUT6:I1->O            1   0.043   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0_dpot (subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0_dpot)
+     FDRE:D                   -0.001          subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0
+    ----------------------------------------
+    Total                      5.304ns (0.913ns logic, 4.391ns route)
+                                       (17.2% logic, 82.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock hwcosim_clkgen_mmcm_clkout0_buf
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+hwcosim_clkgen_mmcm_clkout0_buf|    0.829|         |         |         |
+hwcosim_sstep_clk_int          |    1.170|         |         |         |
+-------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hwcosim_sstep_clk_int
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+hwcosim_clkgen_mmcm_clkout0_buf|    4.008|         |         |         |
+hwcosim_sstep_clk_int          |    5.304|         |         |         |
+-------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 30.03 secs
+ 
+--> 
+
+Total memory usage is 501904 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

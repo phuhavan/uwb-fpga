@@ -1,0 +1,1 @@
+xflow -p xc7k325t-2ffg900 -implement hwcosim_impl.opt -config hwcosim_bitgen.opt hwcosim_top

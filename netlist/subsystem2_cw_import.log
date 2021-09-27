@@ -1,0 +1,12 @@
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/subsystem2_cw.v"
+   into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/subsystem2.v" into
+   library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.

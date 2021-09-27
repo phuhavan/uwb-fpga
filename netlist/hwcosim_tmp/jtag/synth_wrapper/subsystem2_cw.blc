@@ -1,0 +1,34 @@
+Release 14.6 ngcbuild P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngcbuild.exe -sd
+D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/hwcosim_tmp/jtag/synth_
+model -sd D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist -sd
+D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/ipcore_dir
+subsystem2_cw subsystem2_cw.ngc
+
+Reading NGO file
+"D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/hwcosim_tmp/jtag/synth
+_model/subsystem2_cw.ngc" ...
+Loading design module
+"D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/xlpersistentdff.ngc"..
+.
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 226824 kilobytes
+
+Writing NGC file "subsystem2_cw.ngc" ...
+Total REAL time to NGCBUILD completion:  6 sec
+Total CPU time to NGCBUILD completion:   6 sec
+
+Writing NGCBUILD log file "subsystem2_cw.blc"...

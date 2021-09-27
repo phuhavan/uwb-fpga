@@ -1,0 +1,1 @@
+run -ifn xst_subsystem2.prj -ifmt mixed -ofn subsystem2_cw.ngc -ofmt NGC -p xc7k325t-2ffg900 -ent subsystem2_cw -keep_hierarchy NO -iobuf YES -bus_delimiter [] -top subsystem2_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc subsystem2_cw.xcf -write_timing_constraints yes

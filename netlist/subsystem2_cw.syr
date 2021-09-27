@@ -1,0 +1,944 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+Reading constraint file D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.xcf.
+XCF parsing done.
+Reading design: subsystem2_cw.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "subsystem2_cw.prj"
+Synthesis Constraint File          : "D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.xcf"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "subsystem2_cw"
+Output Format                      : NGC
+Target Device                      : xc7k325t-2-ffg900
+
+---- Source Options
+Top Module Name                    : subsystem2_cw
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : NO
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : []
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" into library work
+Parsing module <srl17e>.
+Parsing module <synth_reg>.
+Parsing module <synth_reg_reg>.
+Parsing module <synth_reg_w_init>.
+Parsing module <single_reg_w_init>.
+Parsing module <cast>.
+Parsing module <shift_division_result>.
+Parsing module <shift_op>.
+Parsing module <pad_lsb>.
+Parsing module <zero_ext>.
+Parsing module <sign_ext>.
+Parsing module <extend_msb>.
+Parsing module <align_input>.
+Parsing module <round_towards_inf>.
+Parsing module <round_towards_even>.
+Parsing module <trunc>.
+Parsing module <saturation_arith>.
+Parsing module <wrap_arith>.
+Parsing module <convert_type>.
+Parsing module <uwb_re>.
+Parsing module <uwb_re_syn_fsm>.
+Parsing module <uwb_re_syn_datapath>.
+Parsing module <uwb_re_syn_counter>.
+Parsing module <uwb_re_syn_coarse>.
+Parsing module <uwb_re_phr_top>.
+Parsing module <uwb_re_demo>.
+Parsing module <subsystem2>.
+Analyzing Verilog file "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" into library work
+Parsing module <xlclockdriver>.
+Parsing module <default_clock_driver_uwb_re_blackbox>.
+Parsing module <subsystem2_cw>.
+Parsing module <xlpersistentdff>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <subsystem2_cw>.
+WARNING:HDLCompiler:1016 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" Line 329: Port clr is not connected to this instance
+
+Elaborating module <default_clock_driver_uwb_re_blackbox>.
+
+Elaborating module <xlclockdriver(log_2_period=1,period=1,use_bufg=0)>.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" Line 200: Result of 2-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <synth_reg_w_init(width=1,init_index=0,init_value=32'b0,latency=1)>.
+
+Elaborating module <single_reg_w_init(width=1,init_index=0,init_value=1'b0)>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <subsystem2>.
+
+Elaborating module <uwb_re>.
+
+Elaborating module <uwb_re_syn_fsm>.
+
+Elaborating module <uwb_re_syn_counter>.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 1967: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 1985: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 1995: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2007: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2017: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2032: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2046: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <uwb_re_syn_coarse>.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2207: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <uwb_re_syn_datapath>.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 1681: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 1683: Result of 32-bit expression is truncated to fit in 9-bit target.
+
+Elaborating module <uwb_re_demo>.
+
+Elaborating module <uwb_re_phr_top>.
+WARNING:HDLCompiler:1127 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v" Line 2347: Assignment to c5 ignored, since the identifier is never used
+
+Elaborating module <xlpersistentdff>.
+WARNING:HDLCompiler:1499 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" Line 428: Empty module <xlpersistentdff> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <subsystem2_cw>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v".
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_1_sg_x0>.
+    Set property "syn_keep = 1" for signal <persistentdff_inst_q>.
+WARNING:Xst - Value "1" of property "keep" is not applicable. List of valid values is "false, no, soft, true, yes" 
+WARNING:Xst:37 - Detected unknown constraint/property "preserve_signal". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <subsystem2_cw> synthesized.
+
+Synthesizing Unit <default_clock_driver_uwb_re_blackbox>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v".
+    Set property "syn_noprune = true".
+    Set property "optimize_primitives = false".
+    Set property "dont_touch = true".
+INFO:Xst:3210 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" line 334: Output port <clr> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" line 334: Output port <ce_logic> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <default_clock_driver_uwb_re_blackbox> synthesized.
+
+Synthesizing Unit <xlclockdriver>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v".
+        log_2_period = 1
+        period = 1
+        use_bufg = 0
+        pipeline_regs = 5
+        max_pipeline_regs = 8
+        num_pipeline_regs = 5
+        factor = 5
+        rem_pipeline_regs = 1
+        trunc_period = 1'b1
+        period_floor = 2
+        power_of_2_counter = 1
+        cnt_width = 1
+        clk_for_ce_pulse_minus1 = 1'b0
+        clk_for_ce_pulse_minus2 = 1'b0
+        clk_for_ce_pulse_minus_regs = 1'b0
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec>.
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec_logic>.
+INFO:Xst:3210 - "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2_cw.v" line 230: Output port <o> of the instance <clr_reg> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <xlclockdriver> synthesized.
+
+Synthesizing Unit <synth_reg_w_init>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+        width = 1
+        init_index = 0
+        init_value = 1'b0
+        latency = 1
+    Summary:
+	no macro.
+Unit <synth_reg_w_init> synthesized.
+
+Synthesizing Unit <single_reg_w_init>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+        width = 1
+        init_index = 0
+        init_value = 1'b0
+        init_index_val = 1'b0
+        result = 1'b0
+        init_const = 1'b0
+    Summary:
+	no macro.
+Unit <single_reg_w_init> synthesized.
+
+Synthesizing Unit <subsystem2>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+    Summary:
+	no macro.
+Unit <subsystem2> synthesized.
+
+Synthesizing Unit <uwb_re>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+    Summary:
+	no macro.
+Unit <uwb_re> synthesized.
+
+Synthesizing Unit <uwb_re_syn_fsm>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <ps>.
+    Found finite state machine <FSM_0> for signal <ps>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | in_rst (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <uwb_re_syn_fsm> synthesized.
+
+Synthesizing Unit <uwb_re_syn_counter>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 13-bit register for signal <countsyncsym>.
+    Found 11-bit register for signal <countdatasym>.
+    Found 3-bit register for signal <count0to7>.
+    Found 8-bit register for signal <count_coarsesample>.
+    Found 5-bit register for signal <count_coarsesyncsym>.
+    Found 4-bit register for signal <countgroup>.
+    Found 8-bit register for signal <countsample>.
+    Found 8-bit adder for signal <countsample[7]_GND_10_o_add_1_OUT> created at line 1967.
+    Found 13-bit adder for signal <countsyncsym[12]_GND_10_o_add_20_OUT> created at line 1985.
+    Found 11-bit adder for signal <countdatasym[10]_GND_10_o_add_28_OUT> created at line 1995.
+    Found 3-bit adder for signal <count0to7[2]_GND_10_o_add_34_OUT> created at line 2007.
+    Found 8-bit adder for signal <count_coarsesample[7]_GND_10_o_add_40_OUT> created at line 2017.
+    Found 5-bit adder for signal <count_coarsesyncsym[4]_GND_10_o_add_57_OUT> created at line 2032.
+    Found 4-bit adder for signal <countgroup[3]_GND_10_o_add_77_OUT> created at line 2046.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <uwb_re_syn_counter> synthesized.
+
+Synthesizing Unit <uwb_re_syn_coarse>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <coarse_error>.
+    Found 176-bit register for signal <n0384[175:0]>.
+    Found 16-bit register for signal <reg_comp>.
+    Found 4-bit register for signal <i_max>.
+    Found 4-bit register for signal <i_temp>.
+    Found 4-bit register for signal <count_i>.
+    Found 1-bit register for signal <coarse_off>.
+    Found 32-bit register for signal <sympower0>.
+    Found 32-bit register for signal <sympower1>.
+    Found 32-bit register for signal <a_power>.
+    Found 32-bit register for signal <a1_power>.
+    Found 32-bit register for signal <a2_power>.
+    Found 16-bit adder for signal <countgroup[3]_GND_11_o_add_6_OUT> created at line 2145.
+    Found 4-bit adder for signal <count_i[3]_GND_11_o_add_46_OUT> created at line 2207.
+    Found 32-bit adder for signal <sympower0[31]_GND_11_o_add_59_OUT> created at line 2252.
+    Found 32-bit adder for signal <sympower1[31]_GND_11_o_add_60_OUT> created at line 2255.
+    Found 32-bit adder for signal <a_power[31]_sympower0[31]_add_72_OUT> created at line 2269.
+    Found 32-bit adder for signal <a_power[31]_sympower1[31]_add_73_OUT> created at line 2271.
+    Found 32-bit adder for signal <a1_power[31]_sympower0[31]_add_77_OUT> created at line 2275.
+    Found 32-bit adder for signal <a1_power[31]_sympower1[31]_add_78_OUT> created at line 2277.
+    Found 32-bit adder for signal <a2_power[31]_sympower0[31]_add_80_OUT> created at line 2281.
+    Found 32-bit adder for signal <a2_power[31]_sympower1[31]_add_81_OUT> created at line 2283.
+    Found 256x1-bit Read Only RAM for signal <countsample[7]_X_11_o_Mux_4_o>
+    Found 16-bit 11-to-1 multiplexer for signal <n0464> created at line 2145.
+    Found 16-bit 11-to-1 multiplexer for signal <count0to10[3]_X_11_o_wide_mux_28_OUT> created at line 2179.
+    Found 5-bit comparator lessequal for signal <n0254> created at line 2144
+    Found 8-bit comparator lessequal for signal <n0277> created at line 2177
+    Found 8-bit comparator lessequal for signal <n0280> created at line 2177
+    Found 16-bit comparator greater for signal <n0283> created at line 2178
+    Found 4-bit comparator equal for signal <n0295> created at line 2194
+    Found 5-bit comparator lessequal for signal <n0301> created at line 2204
+    Found 32-bit comparator greater for signal <a1_power[31]_a_power[31]_LessThan_55_o> created at line 2219
+    Found 32-bit comparator greater for signal <a_power[31]_a2_power[31]_LessThan_56_o> created at line 2219
+    Found 5-bit comparator lessequal for signal <n0343> created at line 2266
+    Found 5-bit comparator lessequal for signal <n0348> created at line 2267
+    Found 5-bit comparator lessequal for signal <n0354> created at line 2273
+    Found 5-bit comparator lessequal for signal <n0356> created at line 2273
+    Summary:
+	inferred   1 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 366 D-type flip-flop(s).
+	inferred  12 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <uwb_re_syn_coarse> synthesized.
+
+Synthesizing Unit <uwb_re_syn_datapath>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <countsample_d1[7:0]>.
+    Found 1-bit register for signal <phr_signal>.
+    Found 1-bit register for signal <enSYNC5>.
+    Found 3968-bit register for signal <n0990[3967:0]>.
+    Found 248-bit register for signal <reg_Ci>.
+    Found 496-bit register for signal <n0991[495:0]>.
+    Found 1-bit register for signal <compare>.
+    Found 16-bit register for signal <reg_comp>.
+    Found 5-bit register for signal <out_m>.
+    Found 9-bit register for signal <n_next>.
+    Found 1-bit register for signal <data_signal>.
+    Found 128-bit register for signal <n0992[127:0]>.
+    Found 16-bit register for signal <reg_comp1>.
+    Found 3-bit register for signal <out_neps>.
+    Found 128-bit register for signal <n1003[127:0]>.
+    Found 3-bit register for signal <n_delta>.
+    Found 32-bit register for signal <sfdsum>.
+    Found 1-bit register for signal <sfd0>.
+    Found 1-bit register for signal <psdu_en>.
+    Found 4-bit subtractor for signal <GND_261_o_GND_261_o_sub_382_OUT> created at line 1681.
+    Found 6-bit subtractor for signal <GND_261_o_GND_261_o_sub_383_OUT> created at line 1683.
+    Found 16-bit adder for signal <countsample[7]_GND_261_o_add_36_OUT> created at line 1603.
+    Found 16-bit adder for signal <symbolci[0][15]_countsample_d1[7]_add_295_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[1][15]_countsample_d1[7]_add_297_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[2][15]_countsample_d1[7]_add_299_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[3][15]_countsample_d1[7]_add_301_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[4][15]_countsample_d1[7]_add_303_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[5][15]_countsample_d1[7]_add_305_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[6][15]_countsample_d1[7]_add_307_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[7][15]_countsample_d1[7]_add_309_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[8][15]_countsample_d1[7]_add_311_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[9][15]_countsample_d1[7]_add_313_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[10][15]_countsample_d1[7]_add_315_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[11][15]_countsample_d1[7]_add_317_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[12][15]_countsample_d1[7]_add_319_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[13][15]_countsample_d1[7]_add_321_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[14][15]_countsample_d1[7]_add_323_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[15][15]_countsample_d1[7]_add_325_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[16][15]_countsample_d1[7]_add_327_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[17][15]_countsample_d1[7]_add_329_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[18][15]_countsample_d1[7]_add_331_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[19][15]_countsample_d1[7]_add_333_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[20][15]_countsample_d1[7]_add_335_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[21][15]_countsample_d1[7]_add_337_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[22][15]_countsample_d1[7]_add_339_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[23][15]_countsample_d1[7]_add_341_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[24][15]_countsample_d1[7]_add_343_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[25][15]_countsample_d1[7]_add_345_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[26][15]_countsample_d1[7]_add_347_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[27][15]_countsample_d1[7]_add_349_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[28][15]_countsample_d1[7]_add_351_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[29][15]_countsample_d1[7]_add_353_OUT> created at line 1628.
+    Found 16-bit adder for signal <symbolci[30][15]_countsample_d1[7]_add_355_OUT> created at line 1628.
+    Found 32-bit adder for signal <GND_261_o_GND_261_o_add_383_OUT> created at line 1683.
+    Found 16-bit adder for signal <count0to7[2]_countsample[7]_add_403_OUT> created at line 1737.
+    Found 16-bit adder for signal <count0to7[2]_countsample[7]_add_440_OUT> created at line 1772.
+    Found 32-bit adder for signal <sfdsum[31]_GND_261_o_add_540_OUT> created at line 1879.
+    Found 9-bit subtractor for signal <GND_261_o_GND_261_o_sub_385_OUT[8:0]> created at line 1683.
+    Found 8-bit subtractor for signal <GND_261_o_GND_261_o_sub_433_OUT[7:0]> created at line 1762.
+    Found 248-bit shifter logical right for signal <reg_Ci[247]_out_m[1]_shift_right_392_OUT> created at line 1721
+    Found 248-bit shifter logical left for signal <reg_Ci[247]_GND_261_o_shift_left_394_OUT> created at line 1721
+    Found 8x8-bit multiplier for signal <n1357> created at line 1879.
+    Found 16-bit 248-to-1 multiplexer for signal <n1400> created at line 1603.
+    Found 16-bit 248-to-1 multiplexer for signal <n1404> created at line 1628.
+    Found 16-bit 31-to-1 multiplexer for signal <countsample_d1[4]_X_260_o_wide_mux_366_OUT> created at line 1657.
+    Found 1-bit 248-to-1 multiplexer for signal <cm> created at line 1736.
+    Found 16-bit 8-to-1 multiplexer for signal <n1499> created at line 1737.
+    Found 16-bit 8-to-1 multiplexer for signal <countsample[2]_sumTPR[7][15]_wide_mux_422_OUT> created at line 1752.
+    Found 1-bit 248-to-1 multiplexer for signal <GND_261_o_X_260_o_Mux_433_o> created at line 1762.
+    Found 16-bit 8-to-1 multiplexer for signal <n1502> created at line 1772.
+    Found 11-bit comparator lessequal for signal <n0023> created at line 1563
+    Found 9-bit comparator equal for signal <GND_261_o_n_next[8]_equal_20_o> created at line 1568
+    Found 13-bit comparator lessequal for signal <n0032> created at line 1574
+    Found 13-bit comparator equal for signal <countsyncsym[12]_shr_length[12]_equal_30_o> created at line 1589
+    Found 12-bit comparator equal for signal <GND_261_o_data_length[11]_equal_33_o> created at line 1591
+    Found 8-bit comparator lessequal for signal <n0847> created at line 1639
+    Found 16-bit comparator lessequal for signal <reg_comp[15]_countsample_d1[4]_LessThan_366_o> created at line 1656
+    Found 8-bit comparator lessequal for signal <n0908> created at line 1743
+    Found 16-bit comparator lessequal for signal <reg_comp1[15]_countsample[2]_LessThan_422_o> created at line 1751
+    Found 8-bit comparator lessequal for signal <n0924> created at line 1763
+    Found 16-bit comparator lessequal for signal <n0946> created at line 1848
+    Found 16-bit comparator lessequal for signal <n0952> created at line 1859
+    Found 16-bit comparator lessequal for signal <n0954> created at line 1861
+    Found 16-bit comparator lessequal for signal <n0956> created at line 1863
+    Found 16-bit comparator lessequal for signal <n0958> created at line 1865
+    Found 32-bit comparator lessequal for signal <n0975> created at line 1889
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  40 Adder/Subtractor(s).
+	inferred 5066 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred 1026 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <uwb_re_syn_datapath> synthesized.
+
+Synthesizing Unit <uwb_re_demo>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <part0>.
+    Found 16-bit register for signal <part1>.
+    Found 1-bit register for signal <data_out>.
+    Found 1-bit register for signal <ddpOuten_o_reg>.
+    Found 16-bit register for signal <sum>.
+    Found 5-bit adder for signal <n0082[4:0][4:0]> created at line 2439.
+    Found 7-bit adder for signal <n0084[6:0][6:0]> created at line 2439.
+    Found 7-bit adder for signal <n0086[6:0][6:0]> created at line 2439.
+    Found 16-bit adder for signal <sum[15]_GND_264_o_add_12_OUT> created at line 2441.
+    Found 5-bit adder for signal <n0091[4:0][4:0]> created at line 2448.
+    Found 7-bit adder for signal <n0093[6:0][6:0]> created at line 2450.
+    Found 8-bit comparator lessequal for signal <n0000> created at line 2423
+    Found 8-bit comparator lessequal for signal <n0002> created at line 2423
+    Found 8-bit comparator lessequal for signal <n0004> created at line 2423
+    Found 16-bit comparator greater for signal <part1[15]_INV_109_o> created at line 2461
+    Found 8-bit comparator equal for signal <GND_264_o_GND_264_o_equal_6_o> created at line 2439
+    Found 8-bit comparator equal for signal <GND_264_o_GND_264_o_equal_8_o> created at line 2439
+    Found 8-bit comparator equal for signal <GND_264_o_GND_264_o_equal_19_o> created at line 2448
+    Found 8-bit comparator equal for signal <GND_264_o_GND_264_o_equal_10_o> created at line 2439
+    Found 8-bit comparator equal for signal <GND_264_o_GND_264_o_equal_12_o> created at line 2439
+    Found 8-bit comparator not equal for signal <GND_264_o_GND_264_o_equal_21_o> created at line 2450
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+Unit <uwb_re_demo> synthesized.
+
+Synthesizing Unit <uwb_re_phr_top>.
+    Related source file is "D:\z_WORKSPACE\UWB\uwb_implementation_final_kintex_final\netlist\subsystem2.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <out_check>.
+    Found 19-bit register for signal <phr>.
+    Found 8-bit comparator lessequal for signal <n0014> created at line 2375
+    Found 11-bit comparator lessequal for signal <n0017> created at line 2375
+    Found 6-bit comparator not equal for signal <n0020> created at line 2375
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <uwb_re_phr_top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x1-bit single-port Read Only RAM                   : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 60
+ 11-bit adder                                          : 1
+ 13-bit adder                                          : 1
+ 16-bit adder                                          : 36
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 7
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 3
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 45
+ 1-bit register                                        : 11
+ 11-bit register                                       : 1
+ 128-bit register                                      : 2
+ 13-bit register                                       : 1
+ 16-bit register                                       : 6
+ 176-bit register                                      : 1
+ 19-bit register                                       : 1
+ 248-bit register                                      : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 6
+ 3968-bit register                                     : 1
+ 4-bit register                                        : 4
+ 496-bit register                                      : 1
+ 5-bit register                                        : 2
+ 8-bit register                                        : 3
+ 9-bit register                                        : 1
+# Comparators                                          : 41
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator equal                               : 1
+ 13-bit comparator equal                               : 1
+ 13-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 7
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 1
+ 5-bit comparator lessequal                            : 6
+ 6-bit comparator not equal                            : 1
+ 8-bit comparator equal                                : 5
+ 8-bit comparator lessequal                            : 9
+ 8-bit comparator not equal                            : 1
+ 9-bit comparator equal                                : 1
+# Multiplexers                                         : 1049
+ 1-bit 2-to-1 multiplexer                              : 746
+ 1-bit 248-to-1 multiplexer                            : 2
+ 16-bit 11-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 276
+ 16-bit 248-to-1 multiplexer                           : 2
+ 16-bit 31-to-1 multiplexer                            : 1
+ 16-bit 8-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 9
+ 32-bit 2-to-1 multiplexer                             : 5
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 248-bit shifter logical left                          : 1
+ 248-bit shifter logical right                         : 1
+# FSMs                                                 : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 1
+ 1-bit xor6                                            : 1
+ 1-bit xor7                                            : 2
+ 1-bit xor8                                            : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <uwb_re_demo>.
+The following registers are absorbed into accumulator <sum>: 1 register on signal <sum>.
+Unit <uwb_re_demo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uwb_re_syn_coarse>.
+The following registers are absorbed into accumulator <a1_power>: 1 register on signal <a1_power>.
+The following registers are absorbed into accumulator <a_power>: 1 register on signal <a_power>.
+The following registers are absorbed into accumulator <a2_power>: 1 register on signal <a2_power>.
+The following registers are absorbed into accumulator <sympower1>: 1 register on signal <sympower1>.
+The following registers are absorbed into accumulator <sympower0>: 1 register on signal <sympower0>.
+The following registers are absorbed into counter <count_i>: 1 register on signal <count_i>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_countsample[7]_X_11_o_Mux_4_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 1-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(countsample[7],countsample[6],countsample[5],countsample[4],countsample[3],countsample[2],countsample[1],countsample[0])> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <uwb_re_syn_coarse> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uwb_re_syn_counter>.
+The following registers are absorbed into counter <countdatasym>: 1 register on signal <countdatasym>.
+The following registers are absorbed into counter <count0to7>: 1 register on signal <count0to7>.
+The following registers are absorbed into counter <countsyncsym>: 1 register on signal <countsyncsym>.
+The following registers are absorbed into counter <count_coarsesample>: 1 register on signal <count_coarsesample>.
+The following registers are absorbed into counter <count_coarsesyncsym>: 1 register on signal <count_coarsesyncsym>.
+The following registers are absorbed into counter <countsample>: 1 register on signal <countsample>.
+The following registers are absorbed into counter <countgroup>: 1 register on signal <countgroup>.
+Unit <uwb_re_syn_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uwb_re_syn_datapath>.
+The following registers are absorbed into accumulator <sfdsum>: 1 register on signal <sfdsum>.
+Unit <uwb_re_syn_datapath> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 256x1-bit single-port distributed Read Only RAM       : 1
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 45
+ 16-bit adder                                          : 35
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 2
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 3
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 8
+ 11-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 7
+ 16-bit up accumulator                                 : 1
+ 32-bit up accumulator                                 : 4
+ 32-bit up loadable accumulator                        : 2
+# Registers                                            : 5291
+ Flip-Flops                                            : 5291
+# Comparators                                          : 41
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator equal                               : 1
+ 13-bit comparator equal                               : 1
+ 13-bit comparator lessequal                           : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 7
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 1
+ 5-bit comparator lessequal                            : 6
+ 6-bit comparator not equal                            : 1
+ 8-bit comparator equal                                : 5
+ 8-bit comparator lessequal                            : 9
+ 8-bit comparator not equal                            : 1
+ 9-bit comparator equal                                : 1
+# Multiplexers                                         : 1104
+ 1-bit 2-to-1 multiplexer                              : 793
+ 1-bit 248-to-1 multiplexer                            : 2
+ 1-bit 8-to-1 multiplexer                              : 16
+ 16-bit 11-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 273
+ 16-bit 248-to-1 multiplexer                           : 2
+ 16-bit 31-to-1 multiplexer                            : 1
+ 16-bit 8-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 9
+ 32-bit 2-to-1 multiplexer                             : 3
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 248-bit shifter logical left                          : 1
+ 248-bit shifter logical right                         : 1
+# FSMs                                                 : 1
+# Xors                                                 : 6
+ 1-bit xor2                                            : 1
+ 1-bit xor6                                            : 1
+ 1-bit xor7                                            : 2
+ 1-bit xor8                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <ps[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+-------------------
+
+Optimizing unit <subsystem2_cw> ...
+
+Optimizing unit <uwb_re_syn_coarse> ...
+
+Optimizing unit <uwb_re_syn_datapath> ...
+
+Optimizing unit <uwb_re_demo> ...
+
+Optimizing unit <uwb_re_syn_counter> ...
+
+Optimizing unit <uwb_re_phr_top> ...
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+Annotating constraints using XCF file 'D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.xcf'
+XCF parsing done.
+WARNING:Xst:2173 - Found black boxes on which forward tracing can not be performed on edge 'clk':
+ persistentdff_inst
+WARNING:Xst:2174 - These might be cores which have not been read
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block subsystem2_cw, actual ratio is 7.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5558
+ Flip-Flops                                            : 5558
+
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp> has a constant value of 0 in block <subsystem2_cw>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : subsystem2_cw.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 12918
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 62
+#      LUT2                        : 648
+#      LUT3                        : 1066
+#      LUT4                        : 402
+#      LUT5                        : 451
+#      LUT6                        : 6939
+#      MUXCY                       : 868
+#      MUXF7                       : 1150
+#      MUXF8                       : 510
+#      VCC                         : 1
+#      XORCY                       : 808
+# FlipFlops/Latches                : 5558
+#      FD                          : 3
+#      FDC                         : 5
+#      FDCE                        : 368
+#      FDE                         : 19
+#      FDR                         : 45
+#      FDRE                        : 4990
+#      FDSE                        : 128
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 65
+#      IBUF                        : 61
+#      OBUF                        : 4
+# DSPs                             : 1
+#      DSP48E1                     : 1
+# Others                           : 2
+#      TIMESPEC                    : 1
+#      xlpersistentdff             : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7k325tffg900-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            5558  out of  407600     1%  
+ Number of Slice LUTs:                 9580  out of  203800     4%  
+    Number used as Logic:              9580  out of  203800     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   9651
+   Number with an unused Flip Flop:    4093  out of   9651    42%  
+   Number with an unused LUT:            71  out of   9651     0%  
+   Number of fully used LUT-FF pairs:  5487  out of   9651    56%  
+   Number of unique control sets:        36
+
+IO Utilization: 
+ Number of IOs:                          67
+ Number of bonded IOBs:                  66  out of    500    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                      1  out of    840     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 5558  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.107ns (Maximum Frequency: 163.734MHz)
+   Minimum input arrival time before clock: 4.408ns
+   Maximum output required time after clock: 0.734ns
+   Maximum combinational path delay: 0.744ns
+
+=========================================================================
+Timing constraint: TS_clk_2e6d98b4 = PERIOD TIMEGRP "clk_2e6d98b4" 20 nS HIGH 10 nS
+  Clock period: 6.107ns (frequency: 163.734MHz)
+  Total number of paths / destination ports: 22386140 / 11549
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  13.893ns
+  Source:               subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (FF)
+  Destination:          subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0 (FF)
+  Data Path Delay:      6.107ns (Levels of Logic = 11)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 20.000ns
+
+  Data Path: subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (FF) to subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0 (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.236   0.534  subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5 (subsystem2_x0/black_box/SYNC_COUNTER/countsyncsym_5)
+     LUT4:I0->O            1   0.043   0.350  subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2_SW0 (N296)
+     LUT6:I5->O            6   0.043   0.641  subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2 (subsystem2_x0/black_box/SYNC_DATAPATH/in_start_en5SYNC_AND_81_o2)
+     LUT6:I0->O          377   0.043   0.807  subsystem2_x0/black_box/SYNC_DATAPATH/enSYNC71 (subsystem2_x0/black_box/SYNC_DATAPATH/enSYNC7)
+     LUT6:I0->O            2   0.043   0.527  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_reg_cm[126]1 (subsystem2_x0/black_box/SYNC_DATAPATH/reg_cm[126])
+     LUT6:I2->O            1   0.043   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_GND_261_o_X_260_o_Mux_433_o_159 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_GND_261_o_X_260_o_Mux_433_o_159)
+     MUXF7:I1->O           1   0.178   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_14_f7_2 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_14_f73)
+     MUXF8:I1->O           1   0.126   0.495  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_13_f8 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_13_f8)
+     LUT6:I3->O            1   0.043   0.522  subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_7 (subsystem2_x0/black_box/SYNC_DATAPATH/Mmux_cm_7)
+     LUT6:I2->O          129   0.043   0.553  subsystem2_x0/black_box/SYNC_DATAPATH/countsample[7]16 (subsystem2_x0/black_box/SYNC_DATAPATH/cm)
+     LUT2:I0->O          128   0.043   0.751  subsystem2_x0/black_box/SYNC_DATAPATH/en_sm5_rstpot (subsystem2_x0/black_box/SYNC_DATAPATH/en_sm5_rstpot)
+     LUT6:I1->O            1   0.043   0.000  subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0_dpot (subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0_dpot)
+     FDRE:D                   -0.000          subsystem2_x0/black_box/SYNC_DATAPATH/sm_7_0
+    ----------------------------------------
+    Total                      6.107ns (0.927ns logic, 5.180ns route)
+                                       (15.2% logic, 84.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.107|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 72.00 secs
+Total CPU time to Xst completion: 72.53 secs
+ 
+--> 
+
+Total memory usage is 542160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   39 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

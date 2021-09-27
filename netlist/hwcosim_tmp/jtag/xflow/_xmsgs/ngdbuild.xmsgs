@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">T_hwcosim_sys_clk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_hwcosim_sys_clk</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">hwcosim_clkgen_mmcm</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_hwcosim_clkgen_mmcm_clkout0 = PERIOD &quot;hwcosim_clkgen_mmcm_clkout0&quot; TS_hwcosim_sys_clk / 0.25 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="new" >Attribute &quot;<arg fmt="%s" index="1">CLOCK_HOLD</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">hwcosim_clkgen_mmcm</arg>&quot; of type &quot;<arg fmt="%s" index="3">MMCME2_ADV</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">hwcif/hwcosim_dut_inst/default_clock_driver_uwb_re_blackbox_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="new" >clock net <arg fmt="%s" index="1">hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/rst_sync_BUFG</arg> with clock driver <arg fmt="%s" index="2">hwcif/hwcosim_dut_inst/subsystem2_x0/black_box/rst_sync_BUFG</arg> drives no clock pins
+</msg>
+
+</messages>
+

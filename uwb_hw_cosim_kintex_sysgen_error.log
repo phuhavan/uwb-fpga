@@ -1,0 +1,21 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 14.6                   C:/Xilinx/14.6/ISE_DS/ISE/sysgen
+Matlab 8.0.0.783 (R2012b)               C:/Program Files/MATLAB/R2012b
+ISE                                     C:/Xilinx/14.6/ISE_DS/ISE
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Error opening programming cable. 
+     Block: 'uwb_hw_cosim_kintex/Subsystem2/Kintex7 hwcosim'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'uwb_hw_cosim_kintex/Subsystem2/Kintex7 hwcosim'
+
+Details:
+Error opening programming cable. 
+Error occurred during "Simulation Initialization".
+
+--------------------------------------------------------------------------------

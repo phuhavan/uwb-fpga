@@ -1,0 +1,8 @@
+Release 14.6 Drc P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Sat Jan 10 20:14:57 2015
+
+drc -z hwcosim_top.ncd hwcosim_top.pcf
+
+DRC detected 0 errors and 0 warnings.

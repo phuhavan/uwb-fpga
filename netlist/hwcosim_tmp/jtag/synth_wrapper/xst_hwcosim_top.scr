@@ -1,0 +1,17 @@
+run
+-bus_delimiter <>
+-case maintain
+-cross_clock_analysis YES
+-glob_opt AllClockNets
+-hierarchy_separator /
+-ifmt MIXED
+-ifn xst_hwcosim_top.prj
+-iobuf YES
+-ofmt ngc
+-ofn hwcosim_top
+-top hwcosim_top
+-opt_level 2
+-opt_mode SPEED
+-p xc7k325t
+-write_timing_constraints YES
+-report_timing_constraint_problems warning 

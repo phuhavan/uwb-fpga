@@ -1,0 +1,8 @@
+INTSTYLE=xflow
+INFILE=D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\xflow\hwcosim_top.ncd
+OUTFILE=D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\xflow\hwcosim_top.bit
+FAMILY=Kintex7
+PART=xc7k325t-2ffg900
+WORKINGDIR=D:\z_WORKSPACE\UWB\uwb_implementation_hw_kintex7\netlist\hwcosim_tmp\jtag\xflow
+LICENSE=ISE
+USER_INFO=_

@@ -1,0 +1,19 @@
+run
+-bus_delimiter <>
+-case maintain
+-cross_clock_analysis YES
+-glob_opt AllClockNets
+-hierarchy_separator /
+-ifmt MIXED
+-ifn "D:/z_WORKSPACE/UWB/uwb_implementation_hw_kintex7/netlist/xst_subsystem2.prj"
+-iobuf NO
+-ofmt NGC
+-ofn subsystem2_cw
+-top subsystem2_cw
+-report_timing_constraint_problems warning 
+-opt_level 2
+-opt_mode SPEED
+-uc "subsystem2_cw.xcf"
+-p xc7k325t
+-write_timing_constraints YES
+-generics { }

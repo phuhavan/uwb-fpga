@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.xst" -ofn "D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc subsystem2_cw.ucf -p xc7k325t-ffg900-2 subsystem2_cw.ngc subsystem2_cw.ngd  
+map -intstyle ise -p xc7k325t-ffg900-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication on -r 4 -mt off -ir off -pr off -lc off -power off -o subsystem2_cw_map.ncd subsystem2_cw.ngd subsystem2_cw.pcf 
+par -w -intstyle ise -ol high -mt off subsystem2_cw_map.ncd subsystem2_cw.ncd subsystem2_cw.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml subsystem2_cw.twx subsystem2_cw.ncd -o subsystem2_cw.twr subsystem2_cw.pcf -ucf subsystem2_cw.ucf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml subsystem2_cw_preroute.twx subsystem2_cw_map.ncd -o subsystem2_cw_preroute.twr subsystem2_cw.pcf -ucf subsystem2_cw.ucf 

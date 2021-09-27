@@ -1,0 +1,80 @@
+iMPACT Version: Jun  8 2013 14:42:21
+
+iMPACT log file Started on Wed Jun 03 15:34:36 2015
+
+Preference Table
+Name                 Setting             
+StartupClock         Auto_Correction     
+AutoSignature        False               
+KeepSVF              False               
+ConcurrentMode       False               
+UseHighz             False               
+ConfigOnFailure      Stop                
+UserLevel            Novice              
+MessageLevel         Detailed            
+svfUseTime           false               
+SpiByteSwap          Auto_Correction     
+AutoInfer            false               
+SvfPlayDisplayComments false               
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 74 mA.
+Type = 0x0004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1303.
+File version of D:/installation/ise/14.6/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
+Firmware hex file version = 1303.
+PLD file version = 0012h.
+ PLD version = 0012h.
+Type = 0x0004.
+ESN option: 000010F039C001.
+Identifying chain contents...'0': : Manufacturer's ID = Xilinx xc7k325t, Version : 4
+INFO:iMPACT:1777 - 
+   Reading D:/installation/ise/14.6/ISE_DS/ISE/kintex7/data/xc7k325t.bsd...
+INFO:iMPACT - Using CseAdapterBSDevice
+INFO:iMPACT:501 - '1': Added Device xc7k325t successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+Elapsed time =      0 sec.
+'1': Loading file'D:/z_WORKSPACE/UWB/uwb_implementation_final_kintex_final/netlist/subsystem2_cw.bit' ...
+done.
+INFO:iMPACT - Using CseAdapterBSDevice
+UserID read from the bitstream file = 0xFFFFFFFF.
+Data width read from the bitstream file = .
+INFO:iMPACT:501 - '1': Added Device xc7k325t successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Maximum TCK operating frequency for this device chain: 66000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+1: Device Temperature: Current Reading:   36.10 C, Min. Reading:   35.61 C, Max.Reading:   49.39 C
+1: VCCINT Supply: Current Reading:   1.002 V, Min. Reading:   0.999 V, Max.Reading:   1.005 V
+1: VCCAUX Supply: Current Reading:   1.811 V, Min. Reading:   1.805 V, Max.Reading:   1.811 V
+INFO:iMPACT - Creating XC7K325T device.
+'1': Programming device...
+ Match_cycle = NoWait.
+Match cycle: NoWait
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+INFO:Cse - Status register values:
+INFO:Cse - 0011 1111 0101 1110 0000 1000 0100 0010 
+INFO:Cse - '1': Completed downloading bit file to device.
+INFO:Cse - '1': Programming completed successfully.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+Elapsed time =     30 sec.

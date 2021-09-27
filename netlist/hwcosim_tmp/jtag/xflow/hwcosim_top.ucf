@@ -1,0 +1,25 @@
+##############################################################################
+#                                                                            #
+#  Filename   : hwcosim_top.ucf                                              #
+#                                                                            #
+#  Description: Defines the constraints for the Hardware Co-simulation       #
+#               platform.                                                    #
+#                                                                            #
+############################################################################## 
+
+##############################################################################
+#  System Clock Constraints.                                                 #
+##############################################################################
+NET "hwcosim_sys_clk_p" TNM_NET = "T_hwcosim_sys_clk";
+TIMESPEC "TS_hwcosim_sys_clk" = PERIOD "T_hwcosim_sys_clk" 5 ns HIGH 50 %;
+
+##############################################################################
+#  IOB Constraints for HWCosim Top-level.                                    #
+##############################################################################
+#NET "hwcosim_sstep_clk_int" TIG;
+#NET "hwcosim_cosim_clk_sel_int" TIG;
+NET "hwcosim_sys_clk_p" LOC = AD12 | IOSTANDARD=DIFF_SSTL15;
+NET "hwcosim_sys_clk_n" LOC = AD11 | IOSTANDARD=DIFF_SSTL15;
+
+##############################################################################
+

@@ -1,0 +1,1 @@
+xst -ifn xst_subsystem2_cw.scr
